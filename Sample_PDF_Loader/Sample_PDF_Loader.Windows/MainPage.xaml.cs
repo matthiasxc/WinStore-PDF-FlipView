@@ -54,15 +54,6 @@ namespace Sample_PDF_Loader
             string pdfFileName = "6112941";
             Uri fileTarget = new Uri(@"ms-appx:///Data/" + pdfFileName + ".pdf");
             var file = await Package.Current.InstalledLocation.GetFileAsync(@"Data\" + pdfFileName + ".pdf");
-            //StorageFile file = await StorageFile.GetFileFromApplicationUriAsync(fileTarget);
-
-            /// <summary> 
-            /// This renders PDF page with render options  
-            /// Rendering a pdf page requires following 3 steps 
-            ///     1. PdfDocument.LoadFromFileAsync(pdfFile) which returns pdfDocument 
-            ///     2. pdfDocument.GetPage(pageIndex)  
-            ///     3. pdfPage.RenderToStreamAsync(stream) or pdfPage.RenderToStreamAsync(stream,pdfPageRenderOptions) 
-            /// </summary> 
 
             var pdfFile = await PdfDocument.LoadFromFileAsync(file);
 
@@ -73,15 +64,16 @@ namespace Sample_PDF_Loader
             {
 
                 StorageFolder tempFolder = ApplicationData.Current.LocalFolder;
-                StorageFile jpgFile = await tempFolder.CreateFileAsync(pdfFile + "-Page-" + i.ToString() + ".png", CreationCollisionOption.ReplaceExisting);
+                StorageFile jpgFile = await tempFolder.CreateFileAsync(
+                                    pdfFile + "-Page-" + i.ToString() + ".png", 
+                                    CreationCollisionOption.ReplaceExisting
+                                    );
 
                 var pdfPage = pdfFile.GetPage(i);
 
                 if (jpgFile != null && pdfPage != null)
                 {
                     IRandomAccessStream randomStream = await jpgFile.OpenAsync(FileAccessMode.ReadWrite);
-
-                    //PdfPageRenderOptions pdfPageRenderOptions = new PdfPageRenderOptions();
                     await pdfPage.RenderToStreamAsync(randomStream);
                     await randomStream.FlushAsync();
                     randomStream.Dispose();
@@ -90,6 +82,8 @@ namespace Sample_PDF_Loader
 
                 PdfImages.Add(jpgFile.Path);
             }
+
+            this.pdfViewer.ItemsSource = PdfImages;
 
             TimeSpan processTime = DateTime.Now - startTime;
             Debug.WriteLine(processTime.TotalMilliseconds + " ms to process PDF");
@@ -102,46 +96,7 @@ namespace Sample_PDF_Loader
             src.SetSource(await file.OpenAsync(FileAccessMode.Read));
             //Image1.Source = src;
         }
-        private async void Stuff()
-        {
-
-            // Use this if the file is preinstalled with your app 
-            //  - Load file into your app
-            //  - set file to 
-            //      - Build Action -> Content
-            //      - Copy To Output Directory -> Copy if newer
-            //var file = await Package.Current.InstalledLocation.GetFileAsync(@"Data\MyPdfFile.pdf");
-
-            // Use this if the file is saved to the application storage 
-            var file = await ApplicationData.Current.LocalFolder.GetFileAsync("MyPdfFile.pdf");
-
-            // Load the file as a pdf file
-            var pdfFile = await PdfDocument.LoadFromFileAsync(file);
-            if (pdfFile == null)
-                return;
-
-            StorageFolder tempFolder = ApplicationData.Current.LocalFolder;
-            StorageFile pdfImageFile = await tempFolder.CreateFileAsync("MyPdfFile-Page1.png", CreationCollisionOption.ReplaceExisting);
-
-            var pdfPage = pdfFile.GetPage(0);
-            if(pdfImageFile != null && pdfPage != null)
-            {
-                var pdfStream = await pdfImageFile.OpenAsync(FileAccessMode.ReadWrite);
-                await pdfPage.RenderToStreamAsync(pdfStream);
-                await pdfStream.FlushAsync();
-                pdfStream.Dispose();
-                pdfPage.Dispose();
-            }
-
-            // If you're using binding, you can just use a string to the image path
-            string pathForImage = pdfImageFile.Path;
-
-            // or you can set the image source of a XAML Image in code
-            BitmapImage src = new BitmapImage();
-            src.SetSource(await file.OpenAsync(FileAccessMode.Read));
-            MyImageElement.Source = src;
-                        
-        }
+        
     }
 
 }

@@ -21,7 +21,16 @@
             <ColumnDefinition Width="568*"/>
         </Grid.ColumnDefinitions>
         <Button Content="Get PDF file" Click="Button_Click"/>
-        <FlipView x:Name="pdfViewer" Grid.Column="1" ItemTemplate="{StaticResource ImageTemplate}" />
+        
+        <FlipView x:Name="pdfViewer" Grid.Column="1" >
+            <FlipView.ItemTemplate>
+                <DataTemplate>
+                    <Border>
+                        <Image Source="{Binding}" />
+                    </Border>
+                </DataTemplate>
+            </FlipView.ItemTemplate>
+        </FlipView>
 
     </Grid>
 </Page>
