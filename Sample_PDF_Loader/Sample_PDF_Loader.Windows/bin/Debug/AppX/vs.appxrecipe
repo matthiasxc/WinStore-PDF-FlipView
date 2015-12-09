@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>GAMEBOX</Machine>
+    <WindowsUser>Matthias</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <TargetOsVersion>6.3</TargetOsVersion>
+    <TargetOsDescription>Windows 8.1</TargetOsDescription>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>9e64a888-33dd-465c-a7fb-7a1b478df355</PackageIdentityName>
+    <IntermediateOutputPath>D:\Projects\Sample_PDF_Loader\Sample_PDF_Loader\Sample_PDF_Loader.Windows\obj\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>F38796A906C4B8D00E07F4791C12117A01AC00B594A1B20F26FA0AD7E8C87099</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>9e64a888-33dd-465c-a7fb-7a1b478df355_1.0.0.0_neutral__p8hae5rgz9bep</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>9e64a888-33dd-465c-a7fb-7a1b478df355_p8hae5rgz9bep!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>9e64a888-33dd-465c-a7fb-7a1b478df355</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Matthias</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="D:\Projects\Sample_PDF_Loader\Sample_PDF_Loader\Sample_PDF_Loader.Windows\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-07T19:36:24.006</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="D:\Projects\Sample_PDF_Loader\Sample_PDF_Loader\Sample_PDF_Loader.Windows\bin\Debug\Sample_PDF_Loader.Windows.exe">
+      <PackagePath>Sample_PDF_Loader.Windows.exe</PackagePath>
+      <Modified>2015-12-07T19:39:06.853</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\Sample_PDF_Loader\Sample_PDF_Loader\Sample_PDF_Loader.Windows\Data\6112941.pdf">
+      <PackagePath>Data\6112941.pdf</PackagePath>
+      <Modified>2015-12-07T19:08:37.324</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\Sample_PDF_Loader\Sample_PDF_Loader\Sample_PDF_Loader.Windows\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-07-07T06:01:10.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\Sample_PDF_Loader\Sample_PDF_Loader\Sample_PDF_Loader.Windows\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-07-07T06:01:10.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\Sample_PDF_Loader\Sample_PDF_Loader\Sample_PDF_Loader.Windows\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-07-07T06:01:10.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\Sample_PDF_Loader\Sample_PDF_Loader\Sample_PDF_Loader.Windows\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-07-07T06:01:10.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\Sample_PDF_Loader\Sample_PDF_Loader\Sample_PDF_Loader.Windows\bin\Debug\Sample_PDF_Loader.Windows.xr.xml">
+      <PackagePath>Sample_PDF_Loader.Windows.xr.xml</PackagePath>
+      <Modified>2015-12-07T19:39:06.766</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\Sample_PDF_Loader\Sample_PDF_Loader\Sample_PDF_Loader.Windows\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2015-12-07T19:32:20.749</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\Sample_PDF_Loader\Sample_PDF_Loader\Sample_PDF_Loader.Windows\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+      <Modified>2015-12-07T19:39:06.773</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\Sample_PDF_Loader\Sample_PDF_Loader\Sample_PDF_Loader.Windows\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2015-12-07T19:36:23.970</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

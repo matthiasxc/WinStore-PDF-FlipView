@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>GAMEBOX</Machine>
+    <WindowsUser>Matthias</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <TargetOsVersion>6.3</TargetOsVersion>
+    <TargetOsDescription>Windows 8.1</TargetOsDescription>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>9e64a888-33dd-465c-a7fb-7a1b478df355</PackageIdentityName>
+    <IntermediateOutputPath>D:\Projects\Sample_PDF_Loader\Sample_PDF_Loader\Sample_PDF_Loader.Windows\obj\Debug\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="D:\Projects\Sample_PDF_Loader\Sample_PDF_Loader\Sample_PDF_Loader.Windows\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="D:\Projects\Sample_PDF_Loader\Sample_PDF_Loader\Sample_PDF_Loader.Windows\bin\Debug\Sample_PDF_Loader.Windows.exe">
+      <PackagePath>Sample_PDF_Loader.Windows.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\Sample_PDF_Loader\Sample_PDF_Loader\Sample_PDF_Loader.Windows\Data\6112941.pdf">
+      <PackagePath>Data\6112941.pdf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\Sample_PDF_Loader\Sample_PDF_Loader\Sample_PDF_Loader.Windows\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\Sample_PDF_Loader\Sample_PDF_Loader\Sample_PDF_Loader.Windows\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\Sample_PDF_Loader\Sample_PDF_Loader\Sample_PDF_Loader.Windows\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\Sample_PDF_Loader\Sample_PDF_Loader\Sample_PDF_Loader.Windows\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\Sample_PDF_Loader\Sample_PDF_Loader\Sample_PDF_Loader.Windows\bin\Debug\Sample_PDF_Loader.Windows.xr.xml">
+      <PackagePath>Sample_PDF_Loader.Windows.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\Sample_PDF_Loader\Sample_PDF_Loader\Sample_PDF_Loader.Windows\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\Sample_PDF_Loader\Sample_PDF_Loader\Sample_PDF_Loader.Windows\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\Sample_PDF_Loader\Sample_PDF_Loader\Sample_PDF_Loader.Windows\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
